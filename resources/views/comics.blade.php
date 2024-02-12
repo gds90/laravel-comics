@@ -24,6 +24,7 @@
                     <div id="currentSeries">
                         <button id="currentSeriesBtn">CURRENT SERIES</button>
                     </div>
+                    {{-- Ciclo l'array comics --}}
                     @foreach ($comics as $comic)
                         <div class="comic-card">
                             <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
