@@ -18,7 +18,9 @@
 <body>
     @include('partials.header')
     <main>
-
+        <div class="text-center main-content">
+            <p>DC COMICS</p>
+        </div>
     </main>
     @include('partials.footer')
 </body>

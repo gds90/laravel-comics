@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
+// HEADER 
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -46,6 +47,86 @@
     background-size: cover;
 }
 
+// MAIN
+.main-content {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(28, 28, 28);
+    position: relative;
+    z-index: 99999;
+
+    p {
+        font-size: 110px;
+        font-style: italic;
+        color: rgb(56, 128, 241);
+        font-weight: 600;
+        line-height: 2.5;
+        margin: 0
+    }
+
+    .comic-card {
+        width: calc(100% / 6 - 20px);
+        margin: 20px 10px;
+
+
+        img {
+            object-fit: cover;
+            object-position: top;
+            width: 180px;
+            height: 180px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 5px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    .comic-title {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    #loadMoreContainer {
+        text-align: center;
+
+        #loadMoreBtn {
+            background-color: rgb(56, 128, 241);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            border: 0;
+            padding: 10px 50px;
+            margin: 0px 0px 20px 25px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(20, 74, 160);
+            }
+        }
+
+    }
+
+    #currentSeriesBtn {
+        position: absolute;
+        top: -7%;
+        left: 14%;
+        background-color: rgb(56, 128, 241);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        border: 0;
+        padding: 10px 50px;
+        margin: 20px;
+    }
+}
+
+// FOOTER 
 .footerUp {
     height: 350px;
     background-image: url('../img/footer-bg.jpg');
@@ -89,7 +170,7 @@
     background-color: rgb(62, 62, 62);
     height: 110px;
     position: relative;
-    z-index: 99999;
+    z-index: 99;
 
     button {
         border: 2px solid rgb(56, 128, 241);
@@ -109,10 +190,11 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-}
 
-img {
-    position: relative;
+    img {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 

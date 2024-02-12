@@ -18,7 +18,24 @@
 <body>
     @include('partials.header')
     <main>
-
+        <div class="main-content position-relative ">
+            <div class="container">
+                <div class="row py-4">
+                    <div id="currentSeries">
+                        <button id="currentSeriesBtn">CURRENT SERIES</button>
+                    </div>
+                    @foreach ($comics as $comic)
+                        <div class="comic-card">
+                            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                            <span class="comic-title">{{ $comic['title'] }}</span>
+                        </div>
+                    @endforeach
+                    <div id="loadMoreContainer">
+                        <button id="loadMoreBtn">LOAD MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     @include('partials.footer')
 </body>

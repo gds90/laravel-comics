@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-2">
                 <!-- Logo DC -->
-                <a href="#" class="logo">
+                <a href="{{ route('home') }}" class="logo">
                     <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC Comics">
                 </a>
             </div>
@@ -34,7 +34,7 @@
                             </li>
                             <li>
                                 <a class="nav-link {{ Route::currentRouteName() === 'comics' ? 'active' : '' }}"
-                                    href="">COMICS</a>
+                                    href="{{ route('comics') }}">COMICS</a>
                             </li>
                             <li>
                                 <a class="nav-link" href="">MOVIES</a>
