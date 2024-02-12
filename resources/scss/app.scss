@@ -38,6 +38,15 @@
         }
     }
 
+    .search {
+        font-size: 12px;
+        line-height: 8.5;
+
+        span {
+            border-bottom: 2px solid rgb(56, 128, 241);
+            padding-bottom: 5px;
+        }
+    }
 }
 
 .jumbotron {
