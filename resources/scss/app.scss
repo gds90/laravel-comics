@@ -135,6 +135,44 @@
     }
 }
 
+.buyProduct {
+    background: rgb(56, 128, 241);
+    height: 150px;
+    position: relative;
+    z-index: 99;
+
+
+    ul {
+        display: flex;
+        list-style: none;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        li a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    img {
+        max-width: 50px;
+    }
+}
+
+.contentBuyProduct {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.label {
+    color: white;
+    font-size: 13px;
+    margin: 15px;
+    font-weight: 400;
+}
+
 // FOOTER 
 .footerUp {
     height: 350px;
