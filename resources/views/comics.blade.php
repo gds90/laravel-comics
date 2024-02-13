@@ -1,43 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>DC Comics</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-    @include('partials.header')
-    <main>
-        <div class="main-content position-relative ">
-            <div class="container">
-                <div class="row py-4">
-                    <div id="currentSeries">
-                        <button id="currentSeriesBtn">CURRENT SERIES</button>
+@section('content')
+    <div class="main-content position-relative ">
+        <div class="container">
+            <div class="row py-4">
+                <div id="currentSeries">
+                    <button id="currentSeriesBtn">CURRENT SERIES</button>
+                </div>
+                {{-- Ciclo l'array comics --}}
+                @foreach ($comics as $comic)
+                    <div class="comic-card">
+                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                        <span class="comic-title">{{ $comic['title'] }}</span>
                     </div>
-                    {{-- Ciclo l'array comics --}}
-                    @foreach ($comics as $comic)
-                        <div class="comic-card">
-                            <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
-                            <span class="comic-title">{{ $comic['title'] }}</span>
-                        </div>
-                    @endforeach
-                    <div id="loadMoreContainer">
-                        <button id="loadMoreBtn">LOAD MORE</button>
-                    </div>
+                @endforeach
+                <div id="loadMoreContainer">
+                    <button id="loadMoreBtn">LOAD MORE</button>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
     <div class="buyProduct">
         <div class="contentBuyProduct">
             <ul class="list-unstyled ">
@@ -74,7 +56,4 @@
             </ul>
         </div>
     </div>
-    @include('partials.footer')
-</body>
-
-</html>
+@endsection
