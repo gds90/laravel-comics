@@ -1,59 +1,67 @@
 @import '~bootstrap/scss/bootstrap';
 
-// HEADER 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    ul {
-        display: flex;
-        list-style: none;
-        height: 100%;
-        align-items: center;
-    }
-
-    a {
-        padding-top: 35px;
-        padding-left: 30px;
-        font-size: 11px;
-        font-weight: 500;
-        color: black;
-        position: relative;
-
-        &.active,
-        &:hover {
-            color: rgb(56, 128, 241);
-        }
-
-
-        img {
-            max-width: 50%;
-            padding-top: 10px;
-            padding-bottom: 8px;
-        }
-    }
-
-    .search {
-        font-size: 12px;
-        line-height: 8.5;
-
-        span {
-            border-bottom: 2px solid rgb(56, 128, 241);
-            padding-bottom: 5px;
-        }
-    }
+// UTILITY
+.fs_10 {
+    font-size: 10px;
 }
 
-.jumbotron {
-    height: 400px;
-    background-image: url('../img/jumbotron.jpg');
-    background-position: top;
-    background-size: cover;
+// HEADER 
+header {
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            height: 100%;
+            align-items: center;
+        }
+
+        a {
+            padding-top: 35px;
+            padding-left: 30px;
+            font-size: 11px;
+            font-weight: 500;
+            color: black;
+            position: relative;
+
+            &.active,
+            &:hover {
+                color: rgb(56, 128, 241);
+            }
+
+
+            img {
+                max-width: 50%;
+                padding-top: 10px;
+                padding-bottom: 8px;
+            }
+        }
+
+        .search {
+            font-size: 12px;
+            line-height: 8.5;
+
+            span {
+                border-bottom: 2px solid rgb(56, 128, 241);
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .jumbotron {
+        height: 400px;
+        background-image: url('../img/jumbotron.jpg');
+        background-position: top;
+        background-size: cover;
+    }
 }
 
 // MAIN
@@ -73,7 +81,8 @@
         margin: 0
     }
 
-    .comic-card {
+    a {
+        text-decoration: none;
         width: calc(100% / 6 - 20px);
         margin: 20px 10px;
 
@@ -101,38 +110,39 @@
         color: #fff;
     }
 
-    #loadMoreContainer {
-        text-align: center;
+}
 
-        #loadMoreBtn {
-            background-color: rgb(56, 128, 241);
-            color: #fff;
-            font-size: 12px;
-            font-weight: 600;
-            border: 0;
-            padding: 10px 50px;
-            margin: 0px 0px 20px 25px;
-            cursor: pointer;
+#loadMoreContainer {
+    text-align: center;
 
-            &:hover {
-                background-color: rgb(20, 74, 160);
-            }
-        }
-
-    }
-
-    #currentSeriesBtn {
-        position: absolute;
-        top: -7%;
-        left: 14%;
+    #loadMoreBtn {
         background-color: rgb(56, 128, 241);
         color: #fff;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 600;
         border: 0;
         padding: 10px 50px;
-        margin: 20px;
+        margin: 0px 0px 20px 25px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(20, 74, 160);
+        }
     }
+
+}
+
+#currentSeriesBtn {
+    position: absolute;
+    top: -7%;
+    left: 14%;
+    background-color: rgb(56, 128, 241);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    padding: 10px 50px;
+    margin: 20px;
 }
 
 .buyProduct {
@@ -265,4 +275,53 @@
     color: rgb(56, 128, 241);
     font-weight: bold;
     margin: 15px;
+}
+
+// DETAIL-COMIC
+.splitter {
+    height: 75px;
+    background-color: rgb(56, 128, 241);
+
+    .thumb {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+            width: 20%;
+            position: absolute;
+            bottom: -50px;
+        }
+    }
+}
+
+.details {
+    width: 60%;
+    margin: 0 auto;
+
+    p {
+        font-size: 12px;
+    }
+
+    .adv {
+        span {
+            font-size: 11px;
+        }
+    }
+
+    .green-banner {
+        font-size: 11px;
+        border-bottom: 1px solid black;
+    }
+}
+
+.sub-details {
+    position: relative;
+    z-index: 99;
+
+    .sub-details-content {
+        width: 60%;
+        margin: 0 auto;
+
+    }
 }

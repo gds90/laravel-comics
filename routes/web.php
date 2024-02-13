@@ -22,3 +22,15 @@ Route::get('/comics', function () {
     $comics = config('comics');
     return view('comics', compact('comics'));
 })->name('comics');
+
+Route::get('/comics/{param}', function ($id) {
+    $comics = config('comics');
+
+    foreach ($comics as $item) {
+        if ($item['id'] == $id) {
+            $comic = $item;
+        }
+    }
+
+    return view('detail-comic', compact('comic'));
+})->name('detail-comic');
